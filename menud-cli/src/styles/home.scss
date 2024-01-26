@@ -1,0 +1,169 @@
+@import "theme";
+@import "mixins";
+
+body {
+  @include roboto;
+  @include flex-c-c;
+  background-color: $sv-bg;
+  color: $sv-header;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px auto;
+}
+
+input {
+  @include sv-card-border;
+  color: $sv-header;
+  display: block;
+  width: 90%;
+  background-color: $sv-bg;
+  padding: 16px;
+  margin: 8px auto 12px auto;
+
+  &:focus {
+    outline: none;
+    border-color: $sv-purple;
+  }
+}
+
+button {
+  @include sv-card-border;
+  color: $sv-header;
+  background-color: $sv-bg;
+  margin: 10px 5px;
+  padding: 14px 20px;
+}
+
+span {
+  margin-left: 5px;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.login-page {
+  @include flex-c-c;
+  flex-direction: column;
+  align-content: center;
+  height: 100vh;
+}
+
+.login-container {
+  @include sv-card-border;
+  display: block;
+  width: 380px;
+  height: 350px;
+  padding: 12px;
+}
+
+.sm-container {
+  @include sv-card-border;
+  @include flex-c-c;
+  padding: 16px;
+  margin: 20px auto;
+}
+
+.container {
+  justify-content: center;
+  margin: 10px;
+}
+
+.pink {
+  @include sv-pink-btn;
+  font-size: 16px;
+  color: #06070a;
+}
+
+.green {
+  @include sv-green-btn;
+  font-size: 16px;
+  color: #06070a;
+}
+
+.pill {
+  background-color: $sv-pill-bg;
+  padding: 10px 30px;
+  border-radius: 40px;
+}
+
+.crew-title {
+  display: flex;
+  padding: 15px 10px 5px 10px;
+
+  .icon {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    background-color: $sv-purple;
+    padding: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-content: center;
+
+    svg {
+      margin: 5px;
+    }
+  }
+
+  h1 {
+    margin: auto 0;
+  }
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.kitchen-container {
+  height: 100vh;
+  width: 100vw;
+
+  .sm-container {
+    display: block;
+    // background-color: $sv-card-bg-light;
+    width: 45%;
+    margin: 5px auto 5px auto;
+    padding: 10px;
+
+    h3 {
+      margin: 5px 0 10px 0;
+    }
+
+    .pill {
+      font-weight: 400;
+    }
+
+    .flexbox {
+      @include flex-sb-c;
+      padding: 5px;
+    }
+  }
+}
+
+.ordercards {
+  .sm-container {
+    margin: 15px auto;
+  }
+}
+
+.btn-container {
+  flex-direction: row-reverse;
+
+  button {
+    width: 150px;
+  }
+
+  .sm-container {
+    padding: 0 10px;
+    text-align: center;
+    background-color: $sv-card-bg-light;
+  }
+}
