@@ -1,4 +1,4 @@
 {
     "schemaVersion": 2,
-    "dockerFilePath": "./menud-cli/Dockerfile",
+    "dockerfilePath": "./menud-cli/Dockerfile",
 }
