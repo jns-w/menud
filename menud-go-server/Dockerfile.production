@@ -1,8 +1,8 @@
 FROM golang:1.22-alpine3.19
 WORKDIR /app
-COPY go.mod .
+COPY ./menud-go-server/go.mod .
 RUN go mod download
-COPY . .
+COPY ./menud-go-server/ .
 RUN go build -o /app/main .
 CMD ["/app/main"]
 EXPOSE 8080

@@ -5,4 +5,4 @@ RUN yarn install --production
 COPY . .
 RUN yarn add typescript tsc ts-node && yarn build
 CMD ["yarn", "run", "preview"]
-EXPOSE 4173
+EXPOSE 80

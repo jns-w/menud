@@ -1,4 +1,4 @@
 {
     "schemaVersion": 2,
-    "dockerfilePath": "./menud-go-server/Dockerfile",
+    "dockerfilePath": "./menud-go-server/Dockerfile.production"
 }
