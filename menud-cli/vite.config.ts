@@ -5,7 +5,7 @@ export default defineConfig(({mode, command}) => {
   const env = loadEnv(mode, process.cwd(), "")
   return {
     define: {
-      "process.env.VITE_API_ENDPOINT": env.VITE_API_ENDPOINT || "http://localhost:8080",
+      "process.env.VITE_API_ENDPOINT": env.VITE_API_ENDPOINT,
     },
     base: "/",
     plugins: [react()],
