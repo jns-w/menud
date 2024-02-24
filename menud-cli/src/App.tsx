@@ -20,7 +20,8 @@ export type ModalMode = {
   content: string
 }
 
-const API_ENDPOINT = process.env.VITE_API_ENDPOINT || import.meta.env.VITE_API_ENDPOINT
+// const API_ENDPOINT = process.env.VITE_API_ENDPOINT || import.meta.env.VITE_API_ENDPOINT
+const API_ENDPOINT = "http://srv-captain--menud-server"
 
 
 function App() {
