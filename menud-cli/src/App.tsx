@@ -20,8 +20,7 @@ export type ModalMode = {
   content: string
 }
 
-// const API_ENDPOINT = process.env.VITE_API_ENDPOINT || import.meta.env.VITE_API_ENDPOINT
-const API_ENDPOINT = "http://localhost:8080"
+const API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT || "https://menud-server.capybara.wldspace.com"
 
 
 function App() {
