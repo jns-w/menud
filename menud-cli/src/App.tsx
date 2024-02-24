@@ -51,6 +51,7 @@ function App() {
   }
 
   const getMenu = useCallback(async () => {
+    console.log('getting menu from', API_ENDPOINT)
     const data = await axios.get(`${API_ENDPOINT}/api/menu`)
       .then(res => {
         if (res.status !== 200) {
