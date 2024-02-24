@@ -9,9 +9,9 @@ import (
 var DB *sqlx.DB
 
 // InitDB initializes the database connection.
-func InitDB(user string, dbName string) error {
+func InitDB(source string) error {
 	var err error
-	source := "user=" + user + " dbname=" + dbName + " sslmode=disable"
+	//source := "user=" + user + " dbname=" + dbName + " sslmode=disable"
 	DB, err = sqlx.Connect("postgres", source)
 	if err != nil {
 		return err
@@ -27,7 +27,8 @@ func InitDB(user string, dbName string) error {
 		return err
 	}
 
-	fmt.Printf("\nConnected to database %s \n \n", dbName)
+	//fmt.Printf("\nConnected to database %s \n \n", dbName)
+	fmt.Printf("\nConnected to database \n \n")
 
 	return nil
 }

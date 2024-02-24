@@ -6,17 +6,16 @@ import (
 	"github.com/jns-w/menud/menud-go-server/api"
 	"github.com/jns-w/menud/menud-go-server/database"
 	"github.com/jns-w/menud/menud-go-server/middleware"
-	"github.com/joho/godotenv"
 	"log"
 	"os"
 )
 
 func goDotEnvVar(key string) string {
-	err := godotenv.Load(".env")
-
-	if err != nil {
-		log.Fatalf("Error loading env file")
-	}
+	//err := godotenv.Load(".env.production")
+	//
+	//if err != nil {
+	//	log.Fatalf("Error loading env file")
+	//}
 
 	return os.Getenv(key)
 }
@@ -24,11 +23,12 @@ func goDotEnvVar(key string) string {
 func main() {
 
 	//dbSource := goDotEnvVar("DB_SOURCE") // osEnv -> DB_SOURCE="user=user dbname=dbname sslmode=disable"
-	dbUser := goDotEnvVar("DB_USER")
-	dbName := goDotEnvVar("DB_NAME")
+	//dbUser := goDotEnvVar("DB_USER")
+	//dbName := goDotEnvVar("DB_NAME")
+	dbSource := goDotEnvVar("DB_SOURCE")
 
 	// Connect to the database
-	if err := database.InitDB(dbUser, dbName); err != nil {
+	if err := database.InitDB(dbSource); err != nil {
 		log.Fatalf("Failed to connect to database: %v", err)
 	}
 	defer database.DB.Close()

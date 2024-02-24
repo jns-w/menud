@@ -26,6 +26,7 @@ seed.go
 
 .env
 *.env
+.env.*
 
 seeder
 ```
