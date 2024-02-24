@@ -21,7 +21,7 @@ export type ModalMode = {
 }
 
 // const API_ENDPOINT = process.env.VITE_API_ENDPOINT || import.meta.env.VITE_API_ENDPOINT
-const API_ENDPOINT = "srv-captain--menud-server"
+const API_ENDPOINT = "localhost:8080"
 
 
 function App() {
