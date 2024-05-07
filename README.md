@@ -1,7 +1,7 @@
 # Menu'd: A Seamless Mobile Web Menu Experience
 
-Github: [github.com/jns-w/menud](https://github.com/jns-w/menud)\
 Demo site: [menud.jonaswong.dev](https://menud.jonaswong.dev)
+
 ![](https://res.cloudinary.com/ds1s8ilcc/image/upload/v1709716896/Devsite/menu-d/Menud-main_er3jpg.png)
 
 > #### Frontend Stack:
@@ -39,4 +39,5 @@ Set your browser to mobile dev mode and go to the [demo](https://menud.jonaswong
 Menu data is served using a golang server, with PostgresSQL as the database of choice. I have chosen to keep this simple, and not use any abstracted ORMs, opting for [SQLx](https://github.com/launchbadge/sqlx#). Designed for long-term maintainability, the menu's data is separated into categories and joined via IDs when fetched; allowing reusability and adjustments to the menu in the future.
 
 ![Menu'd Models](https://res.cloudinary.com/ds1s8ilcc/image/upload/v1706846307/Devsite/menu-d/menud-models_mo73h7.png)
+
 Thank you for reading! If you're interested, do check out my next project [Nothing To Do](https://github.com/jns-w/nothing), built with React Native.
